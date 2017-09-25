@@ -10,9 +10,10 @@
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Autores">
     <Key>
@@ -22,9 +23,10 @@
     <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Editorial">
     <Key>
@@ -34,9 +36,17 @@
     <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Direccion" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estatus">
+    <Key>
+      <PropertyRef Name="idEstatus" />
+    </Key>
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Incidencias">
     <Key>
@@ -46,9 +56,10 @@
     <Property Name="idLibro" Type="int" Nullable="false" />
     <Property Name="idUsuario" Type="int" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Libros">
     <Key>
@@ -62,9 +73,10 @@
     <Property Name="Paginas" Type="int" />
     <Property Name="Cantidad" Type="int" Nullable="false" />
     <Property Name="Ubicacion" Type="varchar" MaxLength="50" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Maestros">
     <Key>
@@ -76,9 +88,10 @@
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
     <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Permisos">
     <Key>
@@ -86,7 +99,7 @@
     </Key>
     <Property Name="idPermiso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Prestamos">
     <Key>
@@ -95,27 +108,12 @@
     <Property Name="idPrestamo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idLibro" Type="int" Nullable="false" />
     <Property Name="idUsuario" Type="int" Nullable="false" />
-    <Property Name="FechaPrestamo" Type="datetime" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="datetime" />
     <Property Name="FechaDevolucion" Type="datetime" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Status">
-    <Key>
-      <PropertyRef Name="idStatus" />
-    </Key>
-    <Property Name="idStatus" Type="bit" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <EntityType Name="UsuarioPermisos">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idUsuario" Type="int" Nullable="false" />
-    <Property Name="idPermiso" Type="int" Nullable="false" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -127,43 +125,57 @@
     <Property Name="NickName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Contraseña" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" />
+    <Property Name="idPermiso" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="varbinary(max)" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModifica" Type="date" />
-    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="idEstatus" Type="bit" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Alumnos_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Alumnos_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Alumnos">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Autores_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Autores_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Autores" Type="Self.Autores" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Autores">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Editorial_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Editorial_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Editorial" Type="Self.Editorial" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Editorial">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidencias_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
+    <End Role="Incidencias" Type="Self.Incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
+      </Principal>
+      <Dependent Role="Incidencias">
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -176,18 +188,6 @@
       </Principal>
       <Dependent Role="Incidencias">
         <PropertyRef Name="idLibro" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Incidencias_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
-    <End Role="Incidencias" Type="Self.Incidencias" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
-      </Principal>
-      <Dependent Role="Incidencias">
-        <PropertyRef Name="Status" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -227,39 +227,51 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Libros_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Libros_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Libros">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Maestros_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Maestros_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Maestros" Type="Self.Maestros" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Maestros">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Permisos_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Permisos_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
     <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
       </Principal>
       <Dependent Role="Permisos">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idEstatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestamos_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
+      </Principal>
+      <Dependent Role="Prestamos">
+        <PropertyRef Name="idEstatus" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -275,18 +287,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Prestamos_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
-    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
-      </Principal>
-      <Dependent Role="Prestamos">
-        <PropertyRef Name="Status" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Prestamos_Usuarios_idUsuario">
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
     <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
@@ -295,42 +295,6 @@
         <PropertyRef Name="idUsuario" />
       </Principal>
       <Dependent Role="Prestamos">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioPermisos_Permisos_idPermiso">
-    <End Role="Permisos" Type="Self.Permisos" Multiplicity="1" />
-    <End Role="UsuarioPermisos" Type="Self.UsuarioPermisos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Permisos">
-        <PropertyRef Name="idPermiso" />
-      </Principal>
-      <Dependent Role="UsuarioPermisos">
-        <PropertyRef Name="idPermiso" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioPermisos_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
-    <End Role="UsuarioPermisos" Type="Self.UsuarioPermisos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
-      </Principal>
-      <Dependent Role="UsuarioPermisos">
-        <PropertyRef Name="Status" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioPermisos_Usuarios_idUsuario">
-    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
-    <End Role="UsuarioPermisos" Type="Self.UsuarioPermisos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuarios">
-        <PropertyRef Name="idUsuario" />
-      </Principal>
-      <Dependent Role="UsuarioPermisos">
         <PropertyRef Name="idUsuario" />
       </Dependent>
     </ReferentialConstraint>
@@ -347,6 +311,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Usuarios_Estatus_idEstatus">
+    <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estatus">
+        <PropertyRef Name="idEstatus" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idEstatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Usuarios_Maestros_idMaestro">
     <End Role="Maestros" Type="Self.Maestros" Multiplicity="0..1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -359,15 +335,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Usuarios_Status_idStatus">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+  <Association Name="FK_Usuarios_Permisos_idPermiso">
+    <End Role="Permisos" Type="Self.Permisos" Multiplicity="1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="idStatus" />
+      <Principal Role="Permisos">
+        <PropertyRef Name="idPermiso" />
       </Principal>
       <Dependent Role="Usuarios">
-        <PropertyRef Name="Status" />
+        <PropertyRef Name="idPermiso" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -377,6 +353,7 @@
   <Function Name="GetLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
   </Function>
+  <Function Name="GetLibrosPrestados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="GetPrestamo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
   </Function>
@@ -384,32 +361,31 @@
     <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Autores" EntityType="Self.Autores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Editorial" EntityType="Self.Editorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estatus" EntityType="Self.Estatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Incidencias" EntityType="Self.Incidencias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Libros" EntityType="Self.Libros" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Maestros" EntityType="Self.Maestros" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Prestamos" EntityType="Self.Prestamos" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UsuarioPermisos" EntityType="Self.UsuarioPermisos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Alumnos_Status_idStatus" Association="Self.FK_Alumnos_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Alumnos_Estatus_idEstatus" Association="Self.FK_Alumnos_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Alumnos" EntitySet="Alumnos" />
     </AssociationSet>
-    <AssociationSet Name="FK_Autores_Status_idStatus" Association="Self.FK_Autores_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Autores_Estatus_idEstatus" Association="Self.FK_Autores_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Autores" EntitySet="Autores" />
     </AssociationSet>
-    <AssociationSet Name="FK_Editorial_Status_idStatus" Association="Self.FK_Editorial_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Editorial_Estatus_idEstatus" Association="Self.FK_Editorial_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Editorial" EntitySet="Editorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidencias_Estatus_idEstatus" Association="Self.FK_Incidencias_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
+      <End Role="Incidencias" EntitySet="Incidencias" />
     </AssociationSet>
     <AssociationSet Name="FK_Incidencias_Libros_idLibro" Association="Self.FK_Incidencias_Libros_idLibro">
       <End Role="Libros" EntitySet="Libros" />
-      <End Role="Incidencias" EntitySet="Incidencias" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Incidencias_Status_idStatus" Association="Self.FK_Incidencias_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
       <End Role="Incidencias" EntitySet="Incidencias" />
     </AssociationSet>
     <AssociationSet Name="FK_Incidencias_Usuarios_idUsuario" Association="Self.FK_Incidencias_Usuarios_idUsuario">
@@ -424,52 +400,44 @@
       <End Role="Editorial" EntitySet="Editorial" />
       <End Role="Libros" EntitySet="Libros" />
     </AssociationSet>
-    <AssociationSet Name="FK_Libros_Status_idStatus" Association="Self.FK_Libros_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Libros_Estatus_idEstatus" Association="Self.FK_Libros_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Libros" EntitySet="Libros" />
     </AssociationSet>
-    <AssociationSet Name="FK_Maestros_Status_idStatus" Association="Self.FK_Maestros_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Maestros_Estatus_idEstatus" Association="Self.FK_Maestros_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Maestros" EntitySet="Maestros" />
     </AssociationSet>
-    <AssociationSet Name="FK_Permisos_Status_idStatus" Association="Self.FK_Permisos_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Permisos_Estatus_idEstatus" Association="Self.FK_Permisos_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestamos_Estatus_idEstatus" Association="Self.FK_Prestamos_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
+      <End Role="Prestamos" EntitySet="Prestamos" />
     </AssociationSet>
     <AssociationSet Name="FK_Prestamos_Libros_idLibro" Association="Self.FK_Prestamos_Libros_idLibro">
       <End Role="Libros" EntitySet="Libros" />
-      <End Role="Prestamos" EntitySet="Prestamos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Prestamos_Status_idStatus" Association="Self.FK_Prestamos_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
       <End Role="Prestamos" EntitySet="Prestamos" />
     </AssociationSet>
     <AssociationSet Name="FK_Prestamos_Usuarios_idUsuario" Association="Self.FK_Prestamos_Usuarios_idUsuario">
       <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="Prestamos" EntitySet="Prestamos" />
     </AssociationSet>
-    <AssociationSet Name="FK_UsuarioPermisos_Permisos_idPermiso" Association="Self.FK_UsuarioPermisos_Permisos_idPermiso">
-      <End Role="Permisos" EntitySet="Permisos" />
-      <End Role="UsuarioPermisos" EntitySet="UsuarioPermisos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioPermisos_Status_idStatus" Association="Self.FK_UsuarioPermisos_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
-      <End Role="UsuarioPermisos" EntitySet="UsuarioPermisos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioPermisos_Usuarios_idUsuario" Association="Self.FK_UsuarioPermisos_Usuarios_idUsuario">
-      <End Role="Usuarios" EntitySet="Usuarios" />
-      <End Role="UsuarioPermisos" EntitySet="UsuarioPermisos" />
-    </AssociationSet>
     <AssociationSet Name="FK_Usuarios_Alumnos_idAlumno" Association="Self.FK_Usuarios_Alumnos_idAlumno">
       <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Estatus_idEstatus" Association="Self.FK_Usuarios_Estatus_idEstatus">
+      <End Role="Estatus" EntitySet="Estatus" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
     <AssociationSet Name="FK_Usuarios_Maestros_idMaestro" Association="Self.FK_Usuarios_Maestros_idMaestro">
       <End Role="Maestros" EntitySet="Maestros" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
-    <AssociationSet Name="FK_Usuarios_Status_idStatus" Association="Self.FK_Usuarios_Status_idStatus">
-      <End Role="Status" EntitySet="Status" />
+    <AssociationSet Name="FK_Usuarios_Permisos_idPermiso" Association="Self.FK_Usuarios_Permisos_idPermiso">
+      <End Role="Permisos" EntitySet="Permisos" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
   </EntityContainer>

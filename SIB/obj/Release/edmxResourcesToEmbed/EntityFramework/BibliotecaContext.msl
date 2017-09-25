@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BibliotecaModelStoreContainer" CdmEntityContainer="BibliotecaEntities">
+  <EntityContainerMapping StorageEntityContainer="BibliotecaModelStoreContainer" CdmEntityContainer="BibliotecaContext">
     <EntitySetMapping Name="Alumnos">
       <EntityTypeMapping TypeName="BibliotecaModel.Alumnos">
         <MappingFragment StoreEntitySet="Alumnos">
@@ -10,9 +10,10 @@
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -23,9 +24,10 @@
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -36,9 +38,18 @@
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estatus">
+      <EntityTypeMapping TypeName="BibliotecaModel.Estatus">
+        <MappingFragment StoreEntitySet="Estatus">
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -49,9 +60,10 @@
           <ScalarProperty Name="idLibro" ColumnName="idLibro" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -66,9 +78,10 @@
           <ScalarProperty Name="Paginas" ColumnName="Paginas" />
           <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
           <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -81,9 +94,10 @@
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -92,7 +106,7 @@
         <MappingFragment StoreEntitySet="Permisos">
           <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -104,27 +118,10 @@
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
           <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Status">
-      <EntityTypeMapping TypeName="BibliotecaModel.Status">
-        <MappingFragment StoreEntitySet="Status">
-          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="UsuarioPermisos">
-      <EntityTypeMapping TypeName="BibliotecaModel.UsuarioPermisos">
-        <MappingFragment StoreEntitySet="UsuarioPermisos">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -137,9 +134,11 @@
           <ScalarProperty Name="NickName" ColumnName="NickName" />
           <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
           <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
           <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -177,6 +176,19 @@
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLibrosPrestados" FunctionName="BibliotecaModel.Store.GetLibrosPrestados">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.GetLibrosPrestados_Result">
+          <ScalarProperty Name="Prestamos_Totales" ColumnName="Prestamos_Totales" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Paginas" ColumnName="Paginas" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
