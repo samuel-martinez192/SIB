@@ -299,6 +299,7 @@ C:\Users\samue\Source\Repos\SIB\SIB\bin\Release\zh-CHS\Microsoft.ReportViewer.Wi
 C:\Users\samue\Source\Repos\SIB\SIB\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\samue\Source\Repos\SIB\SIB\bin\Release\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\samue\Source\Repos\SIB\SIB\bin\Release\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Source\Repos\SIB\SIB\obj\Release\SIB.csprojResolveAssemblyReference.cache
 C:\Users\samue\Source\Repos\SIB\SIB\obj\Release\SIB.csproj.SIB.exe.config
 C:\Users\samue\Source\Repos\SIB\SIB\obj\Release\Resources\Icons.baml
 C:\Users\samue\Source\Repos\SIB\SIB\obj\Release\Resources\IconsNonShared.baml
