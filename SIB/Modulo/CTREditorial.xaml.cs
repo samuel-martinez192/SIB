@@ -106,8 +106,9 @@ namespace SIB.Modulo
                 using (var context = new BibliotecaContext())
                 {
 
-                    if (instancia == null)
+                    if (instancia.idEditorial == 0)
                     {
+                        instancia.Imagen = bytesImagen;
                         instancia.FechaIngreso = DateTime.Now.Date;
                         context.Editorial.Add(instancia);
                     }
