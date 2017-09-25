@@ -109,7 +109,7 @@ namespace SIB.Modulo
             {
                 using (var context = new BibliotecaContext())
                 {
-                    if (instancia == null)
+                    if (instancia.idIncidencia == 0)
                     {
                         instancia.Imagen = bytesImagen;
                         instancia.FechaIngreso = DateTime.Now.Date;
