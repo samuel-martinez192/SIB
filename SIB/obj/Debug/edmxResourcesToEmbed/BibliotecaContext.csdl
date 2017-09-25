@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="idAlumno" />
+    </Key>
+    <Property Name="idAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Alumnos_idAlumno" FromRole="Alumnos" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Autores">
+    <Key>
+      <PropertyRef Name="idAutor" />
+    </Key>
+    <Property Name="idAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Libros" Relationship="Self.FK_Libros_Autores_idAutor" FromRole="Autores" ToRole="Libros" />
+  </EntityType>
+  <EntityType Name="Editorial">
+    <Key>
+      <PropertyRef Name="idEditorial" />
+    </Key>
+    <Property Name="idEditorial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Libros" Relationship="Self.FK_Libros_Editorial_idEditorial" FromRole="Editorial" ToRole="Libros" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="idLibro" />
+    </Key>
+    <Property Name="idLibro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEditorial" Type="Int32" Nullable="false" />
+    <Property Name="idAutor" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Paginas" Type="Int32" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Autores" Relationship="Self.FK_Libros_Autores_idAutor" FromRole="Libros" ToRole="Autores" />
+    <NavigationProperty Name="Editorial" Relationship="Self.FK_Libros_Editorial_idEditorial" FromRole="Libros" ToRole="Editorial" />
+    <NavigationProperty Name="Prestamos" Relationship="Self.FK_Prestamos_Libros_idLibro" FromRole="Libros" ToRole="Prestamos" />
+  </EntityType>
+  <EntityType Name="Maestros">
+    <Key>
+      <PropertyRef Name="idMaestro" />
+    </Key>
+    <Property Name="idMaestro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Maestros_idMaestro" FromRole="Maestros" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="idPermiso" />
+    </Key>
+    <Property Name="idPermiso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UsuarioPermisos" Relationship="Self.FK_UsuarioPermisos_Permisos_idPermiso" FromRole="Permisos" ToRole="UsuarioPermisos" />
+  </EntityType>
+  <EntityType Name="Prestamos">
+    <Key>
+      <PropertyRef Name="idPrestamo" />
+    </Key>
+    <Property Name="idPrestamo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idLibro" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaDevolucion" Type="DateTime" Precision="3" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Libros" Relationship="Self.FK_Prestamos_Libros_idLibro" FromRole="Prestamos" ToRole="Libros" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Prestamos_Usuarios_idUsuario" FromRole="Prestamos" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="UsuarioPermisos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idPermiso" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Permisos" Relationship="Self.FK_UsuarioPermisos_Permisos_idPermiso" FromRole="UsuarioPermisos" ToRole="Permisos" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_UsuarioPermisos_Usuarios_idUsuario" FromRole="UsuarioPermisos" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMaestro" Type="Int32" />
+    <Property Name="idAlumno" Type="Int32" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Alumnos" Relationship="Self.FK_Usuarios_Alumnos_idAlumno" FromRole="Usuarios" ToRole="Alumnos" />
+    <NavigationProperty Name="Maestros" Relationship="Self.FK_Usuarios_Maestros_idMaestro" FromRole="Usuarios" ToRole="Maestros" />
+    <NavigationProperty Name="Prestamos" Relationship="Self.FK_Prestamos_Usuarios_idUsuario" FromRole="Usuarios" ToRole="Prestamos" />
+    <NavigationProperty Name="UsuarioPermisos" Relationship="Self.FK_UsuarioPermisos_Usuarios_idUsuario" FromRole="Usuarios" ToRole="UsuarioPermisos" />
+  </EntityType>
+  <Association Name="FK_Usuarios_Alumnos_idAlumno">
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="idAlumno" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libros_Autores_idAutor">
+    <End Role="Autores" Type="Self.Autores" Multiplicity="1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autores">
+        <PropertyRef Name="idAutor" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="idAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libros_Editorial_idEditorial">
+    <End Role="Editorial" Type="Self.Editorial" Multiplicity="1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Editorial">
+        <PropertyRef Name="idEditorial" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="idEditorial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestamos_Libros_idLibro">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="idLibro" />
+      </Principal>
+      <Dependent Role="Prestamos">
+        <PropertyRef Name="idLibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Maestros_idMaestro">
+    <End Role="Maestros" Type="Self.Maestros" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Maestros">
+        <PropertyRef Name="idMaestro" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idMaestro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPermisos_Permisos_idPermiso">
+    <End Role="Permisos" Type="Self.Permisos" Multiplicity="1" />
+    <End Role="UsuarioPermisos" Type="Self.UsuarioPermisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permisos">
+        <PropertyRef Name="idPermiso" />
+      </Principal>
+      <Dependent Role="UsuarioPermisos">
+        <PropertyRef Name="idPermiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestamos_Usuarios_idUsuario">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Prestamos">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPermisos_Usuarios_idUsuario">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioPermisos" Type="Self.UsuarioPermisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPermisos">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BibliotecaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />
+    <EntitySet Name="Autores" EntityType="Self.Autores" />
+    <EntitySet Name="Editorial" EntityType="Self.Editorial" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" />
+    <EntitySet Name="Maestros" EntityType="Self.Maestros" />
+    <EntitySet Name="Permisos" EntityType="Self.Permisos" />
+    <EntitySet Name="Prestamos" EntityType="Self.Prestamos" />
+    <EntitySet Name="UsuarioPermisos" EntityType="Self.UsuarioPermisos" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK_Usuarios_Alumnos_idAlumno" Association="Self.FK_Usuarios_Alumnos_idAlumno">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libros_Autores_idAutor" Association="Self.FK_Libros_Autores_idAutor">
+      <End Role="Autores" EntitySet="Autores" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libros_Editorial_idEditorial" Association="Self.FK_Libros_Editorial_idEditorial">
+      <End Role="Editorial" EntitySet="Editorial" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestamos_Libros_idLibro" Association="Self.FK_Prestamos_Libros_idLibro">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Prestamos" EntitySet="Prestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Maestros_idMaestro" Association="Self.FK_Usuarios_Maestros_idMaestro">
+      <End Role="Maestros" EntitySet="Maestros" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPermisos_Permisos_idPermiso" Association="Self.FK_UsuarioPermisos_Permisos_idPermiso">
+      <End Role="Permisos" EntitySet="Permisos" />
+      <End Role="UsuarioPermisos" EntitySet="UsuarioPermisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestamos_Usuarios_idUsuario" Association="Self.FK_Prestamos_Usuarios_idUsuario">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Prestamos" EntitySet="Prestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPermisos_Usuarios_idUsuario" Association="Self.FK_UsuarioPermisos_Usuarios_idUsuario">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuarioPermisos" EntitySet="UsuarioPermisos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

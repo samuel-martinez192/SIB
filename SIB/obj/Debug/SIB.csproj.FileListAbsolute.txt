@@ -1,0 +1,190 @@
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\SIB.exe.config
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\SIB.exe
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\SIB.pdb
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\EntityFramework.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\MahApps.Metro.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\System.Windows.Interactivity.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\EntityFramework.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\MahApps.Metro.pdb
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Debug\MahApps.Metro.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Resources\Icons.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Resources\IconsNonShared.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRAlumno.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRAutores.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTREditorial.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRIncidencias.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRLibro.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRMaestros.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\MainWindow.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\Menu.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRPrestamo.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRUsuarios.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\App.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB_Content.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB_MarkupCompile.cache
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB_MarkupCompile.lref
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\App.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRAlumno.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRAutores.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTREditorial.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRIncidencias.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRLibro.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRMaestros.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\MainWindow.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\Menu.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRPrestamo.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\Modulo\CTRUsuarios.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB.g.resources
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB.Properties.Resources.resources
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB.exe
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Debug\SIB.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SIB.exe.config
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SIB.exe
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\SIB.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EntityFramework.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\MahApps.Metro.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EnvDTE.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\stdole.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EnvDTE80.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\VSLangProj.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\VSLangProj80.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.MSXML.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\VSLangProj2.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EntityFramework.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\MahApps.Metro.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\MahApps.Metro.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.csproj.SIB.exe.config
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Resources\Icons.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRAlumno.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRAutores.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTREditorial.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRIncidencias.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRLibro.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRMaestros.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRReporte.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\MainWindow.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\Menu.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRPrestamo.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRUsuarios.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\App.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB_Content.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB_MarkupCompile.cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB_MarkupCompile.lref
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\App.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRAlumno.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRAutores.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTREditorial.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRIncidencias.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRLibro.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRMaestros.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRReporte.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\MainWindow.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\Menu.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRPrestamo.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\Modulo\CTRUsuarios.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.g.resources
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.Properties.Resources.resources
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.csproj.GenerateResource.Cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.csproj.CoreCompileInputs.cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.exe
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Debug\SIB.pdb

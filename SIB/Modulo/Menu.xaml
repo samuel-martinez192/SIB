@@ -1,0 +1,272 @@
+﻿<Controls:MetroWindow x:Class="SIB.Modulo.Menu" DataContext=""
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:SIB.Modulo"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Menu" Background="Gainsboro" Height="550" Width="1024" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="Gainsboro" >
+        <Controls:MetroTabControl x:Name="mtcInicio" Background="Gainsboro">
+            <Controls:MetroTabItem x:Name="mtiInicio" Background="Gainsboro" Foreground="White" Header="Inicio">
+                <Grid Background="Gainsboro">
+                    <Controls:Tile x:Name="tileUsuarios" Margin="64,22,772,298" Width="180" Height="160" Title="Usuarios" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Usuarios.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileMaestros" Margin="277,22,559,298" Width="180" Height="160" Title="Maestros" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Maestro.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileAlumnos" Margin="491,22,345,298" Width="180" Height="160" Title="Alumnos" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Estudiante.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileAutores" Margin="707,22,129,298" Width="180" Height="160" Title="Autores" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Autor.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileEditorial" Margin="64,225,772,95" Width="180" Height="160" Title="Editorial" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Editorial.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileLibro" Margin="277,225,559,95" Width="180" Height="160" Title="Libro" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Libro.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tilePrestamo" Margin="491,225,345,95" Width="180" Height="160" Title="Prestamo" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Prestamos.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                    <Controls:Tile x:Name="tileIncidencias" Margin="707,225,129,95" Width="180" Height="160" Title="Incidencias" Click="tile_Click">
+                        <Controls:Tile.Effect>
+                            <DropShadowEffect/>
+                        </Controls:Tile.Effect>
+                        <Image Source="/SIB;component/Imagenes/Incidencias.png" Width="143" Height="119"/>
+                    </Controls:Tile>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem x:Name="mtiLibro" Background="Gainsboro"  Header="Libros">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroLibro" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioLibro" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinLibro" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarLibro" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idLibro}" Header="ID LIBRO"/>
+                            <DataGridTextColumn x:Name="idAutor" Binding="{Binding idAutor}" Header="ID AUTOR"/>
+                            <DataGridTextColumn Binding="{Binding idEditorial}" Header="ID EDITORIAL"/>
+                            <DataGridTextColumn Binding="{Binding Titulo}" Header="TITULO"/>
+                            <DataGridTextColumn Binding="{Binding Categoria}" Header="CATEGORIA"/>
+                            <DataGridTextColumn Binding="{Binding Paginas}" Header="PAGINAS"/>
+                            <DataGridTextColumn Binding="{Binding Cantidad}" Header="CANTIDAD"/>
+                            <DataGridTextColumn Binding="{Binding Ubicacion}" Header="UBICACION"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem x:Name="mtiAutores" Background="Gainsboro"  Header="Autores">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroAutor" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioAutor" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinAutor" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarAutor" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgAutores" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idAutor}" Header="ID AUTOR"/>
+                            <DataGridTextColumn Binding="{Binding Nombre}" Header="NOMBRE"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoPaterno}" Header="APELLIDO PATERNO"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoMaterno}" Header="APELLDIO MATERNO"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem x:Name="mtiEditorial" Background="Gainsboro"  Header="Editorial">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroEditorial" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioEditorial" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinEditorial" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarEditorial" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgEditorial" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idEditorial}" Header="ID EDITORIAL"/>
+                            <DataGridTextColumn Binding="{Binding Nombre}" Header="NOMBRE"/>
+                            <DataGridTextColumn Binding="{Binding Direccion}" Header="DIRECCION"/>
+                            <DataGridTextColumn Binding="{Binding Telefono}" Header="TELEFONO"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem x:Name="mtiPrestamo" Background="Gainsboro"  Header="Prestamo" Visibility="Hidden">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroPrestamo" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioPrestamo" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinPrestamo" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarPrestamo" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgPrestamos" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idPrestamo}" Header="ID PRESTAMO"/>
+                            <DataGridTextColumn Binding="{Binding idLibro}" Header="ID LIBRO"/>
+                            <DataGridTextColumn Binding="{Binding idUsuario}" Header="ID USUARIO"/>
+                            <DataGridTextColumn Binding="{Binding FechaPrestamo}" Header="FECHA PRESTAMO"/>
+                            <DataGridTextColumn Binding="{Binding FechaDevolucion}" Header="FECHA DEVOLUCION"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem x:Name="mtiMaestros" Background="Gainsboro"  Header="Maestros" Visibility="Hidden">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroMaestros" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioMaestros" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinMaestros" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarMaestros" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgMaestros" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idMaestro}" Header="ID MAESTRO"/>
+                            <DataGridTextColumn Binding="{Binding Nombre}" Header="NOMBRE"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoPaterno}" Header="APELLIDO PATERNO"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoMaterno}" Header="APELLDIO MATERNO"/>
+                            <DataGridTextColumn Binding="{Binding Telefono}" Header="TELEFONO"/>
+                            <DataGridTextColumn Binding="{Binding Direccion}" Header="DIRECCION"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem x:Name="mtiAlumnos" Background="Gainsboro"  Header="Alumnos" Visibility="Hidden">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroAlumnos" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioAlumnos" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinAlumnos" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarAlumnos" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgAlumnos" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idAlumno}" Header="ID ALUMNO"/>
+                            <DataGridTextColumn Binding="{Binding Nombre}" Header="NOMBRE"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoPaterno}" Header="APELLIDO PATERNO"/>
+                            <DataGridTextColumn Binding="{Binding ApellidoMaterno}" Header="APELLDIO MATERNO"/>
+                            <DataGridTextColumn Binding="{Binding Telefono}" Header="TELEFONO"/>
+                            <DataGridTextColumn Binding="{Binding Direccion}" Header="DIRECCION"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem x:Name="mtiIncidencias" Background="Gainsboro"  Header="Incidencias" Visibility="Hidden">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroIncidencias" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioIncidencias" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinIncidencias" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarIncidencias" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgIncidencias" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idIncidencia}" Header="ID INCIDENCIA"/>
+                            <DataGridTextColumn Binding="{Binding idLibro}" Header="ID LIBRO"/>
+                            <DataGridTextColumn Binding="{Binding idUsuario}" Header="ID USUARIO"/>
+                            <DataGridTextColumn Binding="{Binding Descripcion}" Header="DESCRIPCION"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem x:Name="mtiUsuarios" Background="Gainsboro"  Header="Usuarios" Visibility="Hidden">
+                <Grid Background="Gainsboro">
+                    <Label Content="Buscar:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" Width="57" Height="26"/>
+                    <TextBox x:Name="txtFiltroUsuarios" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Width="180" Height="26" VerticalAlignment="Top" TextChanged="txtFiltro_TextChanged"/>
+                    <Label Content="Fecha Inicio:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="214,10,0,0" FontWeight="Bold" Width="81" Height="26"/>
+                    <DatePicker x:Name="dpFechaInicioUsuarios" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="214,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Fecha Fin:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="416,10,0,0" FontWeight="Bold" Width="66" Height="26"/>
+                    <DatePicker x:Name="dpFechaFinUsuarios" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="416,36,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Button x:Name="btnConsultarUsuarios" Content="Consultar" HorizontalAlignment="Left" Margin="616,33,0,0" VerticalAlignment="Top" Width="160" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnConsultar_Click"/>
+
+                    <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="False" Margin="10,82,30,29" Background="DarkGray" MouseDoubleClick="dataGridMouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding idUsuario}" Header="ID USUARIO"/>
+                            <DataGridTextColumn Binding="{Binding idMaestro}" Header="ID MAESTRO"/>
+                            <DataGridTextColumn Binding="{Binding idAlumno}" Header="ID ALUMNO"/>
+                            <DataGridTextColumn Binding="{Binding NickName}" Header="NICK NAME"/>
+                            <DataGridTextColumn Binding="{Binding Contraseña}" Header="CONTRASEÑA"/>
+                            <DataGridTextColumn Binding="{Binding CorreoElectronico}" Header="CORREO ELECTRONICO"/>
+                            <DataGridTextColumn Binding="{Binding idPermiso}" Header="ID PERMISO"/>
+                            <DataGridTextColumn Binding="{Binding FechaIngreso}" Header="FECHA INGRESO"/>
+                            <DataGridTextColumn Binding="{Binding FechaModifica}" Header="FECHA MODIFICA"/>
+                            <DataGridTextColumn Binding="{Binding idEstatus}" Header="ESTATUS"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Controls:MetroTabItem>
+
+        </Controls:MetroTabControl>
+    </Grid>
+</Controls:MetroWindow>

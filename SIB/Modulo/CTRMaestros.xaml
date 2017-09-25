@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow x:Class="SIB.Modulo.CTRMaestros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:SIB.Modulo"
+        mc:Ignorable="d"
+        Title="Maestros" Background="Gainsboro" Height="308.163" Width="770.449" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+
+    <Grid x:Name="grdMaestros">
+        <Image x:Name="imagenMaestro" Source="/SIB;component/Imagenes/Maestro2.png" Height="200" Width="200" Margin="23,10,541,69" MouseDown="Image_MouseDown"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="256,22,0,0" FontWeight="Bold" Width="62" Height="26"/>
+        <TextBox x:Name="txtNombre" Text="{Binding Path=Nombre}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un nombre"  Height="23" Margin="256,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black" RenderTransformOrigin="1.408,-3.086"/>
+        <Label Content="Apellido paterno:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="514,22,0,0" FontWeight="Bold" Width="110" Height="26"/>
+        <TextBox x:Name="txtApellidoPaterno" Text="{Binding Path=ApellidoPaterno}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el apellido parterno" Height="23" Margin="514,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Apellido materno:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="256,88,0,0" FontWeight="Bold" Width="110" Height="26"/>
+        <TextBox x:Name="txtApellidoMaterno" Text="{Binding Path=ApellidoMaterno}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el apellido materno" Height="23" Margin="256,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Telefono:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="514,88,0,0" FontWeight="Bold" Width="62" Height="26" RenderTransformOrigin="0.444,-0.033"/>
+        <TextBox x:Name="txtTelefono" Text="{Binding Path=Telefono}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese numero de telefono" Height="23" Margin="514,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Direccion:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="256,150,0,0" FontWeight="Bold" Width="62" Height="26"/>
+        <TextBox x:Name="txtDireccion" Text="{Binding Path=Direccion}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la direccion" Height="23" Margin="256,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Estatus:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="514,150,0,0" FontWeight="Bold" Width="51" Height="26" RenderTransformOrigin="0.54,1.055"/>
+        <ComboBox x:Name="cmbEstatus" SelectedValuePath="idEstatus" DisplayMemberPath="Descripcion" SelectedValue="{Binding idEstatus}" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Seleccione un status" Height="23" Margin="514,176,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="514,228,0,0" VerticalAlignment="Top" Width="117" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnGuardar_Click"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="359,228,0,0" VerticalAlignment="Top" Width="117" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnSalir_Click"/>
+    </Grid>
+
+</Controls:MetroWindow>

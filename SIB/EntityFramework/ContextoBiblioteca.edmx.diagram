@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0da57fce9a2945b5a68ff89a9d115de2" Name="Diagram1">
+        <EntityTypeShape EntityType="BibliotecaModel.Alumnos" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Autores" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Editorial" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Libros" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Maestros" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Permisos" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Prestamos" Width="1.5" PointX="10.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Status" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.UsuarioPermisos" Width="1.5" PointX="7.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Usuarios" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="BibliotecaModel.FK_Alumnos_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Alumnos_idAlumno" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Autores_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Autores_idAutor" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Editorial_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Editorial_idEditorial" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Libros_idLibro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Maestros_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Maestros_idMaestro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Permisos_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_UsuarioPermisos_Permisos_idPermiso" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Usuarios_idUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_UsuarioPermisos_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Status_idStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_UsuarioPermisos_Usuarios_idUsuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

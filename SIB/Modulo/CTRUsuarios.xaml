@@ -1,0 +1,33 @@
+﻿<Controls:MetroWindow x:Class="SIB.Modulo.CTRUsuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:SIB.Modulo"
+        mc:Ignorable="d"
+        Title="Usuarios" Background="Gainsboro" Height="308.163" Width="770.449" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+
+    <Grid x:Name="grdUsuarios">
+        <Image x:Name="imagenUsuario" Source="/SIB;component/Imagenes/Usuarios2.png" Height="200" Width="200" Margin="27,15,537,64" MouseDown="Image_MouseDown"/>
+        <Label Content="Maestro:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="244,15,0,0" FontWeight="Bold" Width="57" Height="26" RenderTransformOrigin="0.086,1.077"/>
+        <ComboBox x:Name="cmbMaestro" SelectedValuePath="idMaestro" DisplayMemberPath="Nombre" SelectedValue="{Binding idMaestro}" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Seleccione a un maestro" Height="23" Margin="244,46,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Alumno:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="244,77,0,0" FontWeight="Bold" Width="57" Height="26"/>
+        <ComboBox x:Name="cmbAlumno" SelectedValuePath="idAlumno" DisplayMemberPath="Nombre" SelectedValue="{Binding idAlumno}" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Seleccione a un alumno" Height="23" Margin="244,103,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Usuario:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="503,77,0,0" FontWeight="Bold" Width="54" Height="26"/>
+        <TextBox x:Name="txtUsuario" Text="{Binding Path=NickName}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el nombre de usuario" Height="23" Margin="503,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="503,15,0,0" FontWeight="Bold" Width="80" Height="26" RenderTransformOrigin="0.325,0.617"/>
+        <PasswordBox x:Name="pbContraseña" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Ingrese una contraseña" Margin="503,46,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Permisos:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="244,134,0,0" FontWeight="Bold" Width="69" Height="26"/>
+        <ComboBox x:Name="cmbPermisos" SelectedValuePath="idPermiso" DisplayMemberPath="Descripcion" SelectedValue="{Binding idPermiso}" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Seleccione el nivel de permisos" Height="23" Margin="244,160,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Correo electronico:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="503,134,0,0" FontWeight="Bold" Width="117" Height="26"/>
+        <TextBox x:Name="txtEmail" Text="{Binding Path=CorreoElectronico}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un correo electronico" Height="23" Margin="503,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Label Content="Estatus:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" Margin="245,189,0,0" FontWeight="Bold" Width="56" Height="26" RenderTransformOrigin="0.272,0.409"/>
+        <ComboBox x:Name="cmbEstatus" SelectedValuePath="idEstatus" DisplayMemberPath="Descripcion" SelectedValue="{Binding idEstatus}" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un status" Height="23" Margin="244,215,0,0" VerticalAlignment="Top" Width="220" BorderBrush="Black"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="624,210,0,0" VerticalAlignment="Top" Width="117" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnGuardar_Click"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="487,210,0,0" VerticalAlignment="Top" Width="117" BorderBrush="Black" Background="White" BorderThickness="1" Click="btnSalir_Click"/>
+    </Grid>
+
+</Controls:MetroWindow>

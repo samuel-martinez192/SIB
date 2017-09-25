@@ -1,0 +1,190 @@
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\SIB.exe.config
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\SIB.exe
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\SIB.pdb
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\EntityFramework.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\EntityFramework.SqlServer.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\MahApps.Metro.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\System.Windows.Interactivity.dll
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\EntityFramework.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\EntityFramework.SqlServer.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\MahApps.Metro.pdb
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\bin\Release\MahApps.Metro.xml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Resources\Icons.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Resources\IconsNonShared.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRAlumno.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRAutores.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTREditorial.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRIncidencias.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRLibro.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRMaestros.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\MainWindow.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\Menu.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRPrestamo.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRUsuarios.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\App.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB_Content.g.cs
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB_MarkupCompile.cache
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB_MarkupCompile.lref
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\App.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRAlumno.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRAutores.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTREditorial.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRIncidencias.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRLibro.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRMaestros.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\MainWindow.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\Menu.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRPrestamo.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\Modulo\CTRUsuarios.baml
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB.g.resources
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB.Properties.Resources.resources
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB.exe
+D:\Documents\Visual Studio 2017\Projects\SIB\SIB\obj\Release\SIB.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SIB.exe.config
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SIB.exe
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\SIB.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EntityFramework.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\MahApps.Metro.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\System.Windows.Interactivity.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EnvDTE.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\stdole.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EnvDTE80.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.Build.Tasks.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\VSLangProj.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\VSLangProj80.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Newtonsoft.Json.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.MSXML.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.Build.Utilities.Core.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.Build.Framework.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\VSLangProj2.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EntityFramework.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\MahApps.Metro.pdb
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\MahApps.Metro.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\bin\Release\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.csproj.SIB.exe.config
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Resources\Icons.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Resources\IconsNonShared.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRAlumno.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRAutores.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTREditorial.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRIncidencias.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRLibro.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRMaestros.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRReporte.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\MainWindow.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\Menu.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRPrestamo.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRUsuarios.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\App.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB_Content.g.cs
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB_MarkupCompile.cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB_MarkupCompile.lref
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\App.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRAlumno.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRAutores.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTREditorial.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRIncidencias.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRLibro.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRMaestros.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRReporte.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\MainWindow.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\Menu.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRPrestamo.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\Modulo\CTRUsuarios.baml
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.g.resources
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.Properties.Resources.resources
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.csproj.GenerateResource.Cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.csproj.CoreCompileInputs.cache
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.exe
+C:\Users\samue\Desktop\Proyecto SIB\Solucion\SIB\SIB\obj\Release\SIB.pdb
