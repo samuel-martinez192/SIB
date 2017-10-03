@@ -271,6 +271,7 @@
       <LastGenOutput>BibliotecaContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
+    <None Include="Base de Datos\Biblioteca.bak" />
     <None Include="EntityFramework\BibliotecaContext.edmx.diagram">
       <DependentUpon>BibliotecaContext.edmx</DependentUpon>
     </None>
