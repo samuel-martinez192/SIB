@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 
@@ -145,6 +147,37 @@ namespace SIB.Herramientas
             }
 
             return ret;
+        }
+
+        /// <summary>
+        /// Metodo que recibe el texto plano y nos regresa un texto cifrado usando SHA 256
+        /// </summary>
+        public static string obtenerSHA256(this string texto)
+        {
+            string resultado = null;
+
+            // Creamos una instancia de SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Computamos el hash y regresa un arreglo de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(texto));
+
+                //Verificamos que nuestro arreglo de bytes tenga datos
+                if (bytes != null && bytes.Length > 0)
+                {
+                    //Vamos a convertirlo a una cadena de texto
+                    StringBuilder builder = new StringBuilder();
+
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+
+                    resultado = builder.ToString();
+                }
+            }
+
+            return resultado;
         }
     }
 }

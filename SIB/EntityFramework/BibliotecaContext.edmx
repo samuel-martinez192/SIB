@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alumnos">
           <Key>
             <PropertyRef Name="idAlumno" />
@@ -128,7 +128,7 @@
           <Property Name="idMaestro" Type="int" />
           <Property Name="idAlumno" Type="int" />
           <Property Name="NickName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Contraseña" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contraseña" Type="varchar(max)" Nullable="false" />
           <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" />
           <Property Name="idPermiso" Type="int" Nullable="false" />
           <Property Name="Imagen" Type="varbinary(max)" />
@@ -446,8 +446,7 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -604,7 +603,7 @@
           <Property Name="idMaestro" Type="Int32" />
           <Property Name="idAlumno" Type="Int32" />
           <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="idPermiso" Type="Int32" Nullable="false" />
           <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -918,14 +917,14 @@
             <End Role="Prestamos" EntitySet="Prestamos" />
           </AssociationSet>
           <FunctionImport Name="GetIncidencia" ReturnType="Collection(BibliotecaModel.GetIncidencia_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetLibro" ReturnType="Collection(BibliotecaModel.GetLibro_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetLibrosPrestados" ReturnType="Collection(BibliotecaModel.GetLibrosPrestados_Result)" />
           <FunctionImport Name="GetPrestamo" ReturnType="Collection(BibliotecaModel.GetPrestamo_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="GetIncidencia_Result">

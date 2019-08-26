@@ -114,14 +114,16 @@ namespace SIB.Modulo
                     if (instancia.idUsuario == 0)
                     {
                         instancia.Imagen = bytesImagen;
-                        instancia.Contraseña = pbContraseña.Password;
+                        var obtenerHash = pbContraseña.Password.obtenerSHA256();
+                        instancia.Contraseña = obtenerHash;
                         instancia.FechaIngreso = DateTime.Now.Date;
                         context.Usuarios.Add(instancia);
                     }
                     else
                     {
                         instancia.Imagen = bytesImagen;
-                        instancia.Contraseña = pbContraseña.Password;
+                        var obtenerHash = pbContraseña.Password.obtenerSHA256();
+                        instancia.Contraseña = obtenerHash;
                         instancia.FechaModifica = DateTime.Now.Date;
                         context.Usuarios.Attach(instancia);
                         context.Entry(instancia).State = EntityState.Modified;

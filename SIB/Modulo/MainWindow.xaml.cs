@@ -45,7 +45,9 @@ namespace SIB.Modulo
                     }
                     else
                     {
-                        var usuario = context.Usuarios.Where(x => x.NickName == txtUsuario.Text && x.Contraseña == pbContraseña.Password && x.idEstatus == true).FirstOrDefault();
+                        var obtenerHash = pbContraseña.Password.obtenerSHA256();
+
+                        var usuario = context.Usuarios.Where(x => x.NickName == txtUsuario.Text && x.Contraseña == obtenerHash && x.idEstatus == true).FirstOrDefault();
                         if (usuario != null)
                         {
                             await this.ShowMessageAsync("Exito", "Bienvenido " + usuario.NickName);
