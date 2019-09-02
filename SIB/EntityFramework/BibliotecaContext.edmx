@@ -465,7 +465,7 @@
           <Property Name="FechaModifica" Type="DateTime" Precision="0" />
           <Property Name="idEstatus" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Estatus" Relationship="Self.FK_Alumnos_Estatus_idEstatus" FromRole="Alumnos" ToRole="Estatus" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Alumnos_idAlumno" FromRole="Alumnos" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Usuarios_Alumnos_idAlumno" FromRole="Alumnos" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Autores">
           <Key>
@@ -511,7 +511,7 @@
           <NavigationProperty Name="Maestros" Relationship="Self.FK_Maestros_Estatus_idEstatus" FromRole="Estatus" ToRole="Maestros" />
           <NavigationProperty Name="Permisos" Relationship="Self.FK_Permisos_Estatus_idEstatus" FromRole="Estatus" ToRole="Permisos" />
           <NavigationProperty Name="Prestamos" Relationship="Self.FK_Prestamos_Estatus_idEstatus" FromRole="Estatus" ToRole="Prestamos" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Estatus_idEstatus" FromRole="Estatus" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Usuarios_Estatus_idEstatus" FromRole="Estatus" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Incidencias">
           <Key>
@@ -527,7 +527,7 @@
           <Property Name="idEstatus" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Estatus" Relationship="Self.FK_Incidencias_Estatus_idEstatus" FromRole="Incidencias" ToRole="Estatus" />
           <NavigationProperty Name="Libros" Relationship="Self.FK_Incidencias_Libros_idLibro" FromRole="Incidencias" ToRole="Libros" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Incidencias_Usuarios_idUsuario" FromRole="Incidencias" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Incidencias_Usuarios_idUsuario" FromRole="Incidencias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Libros">
           <Key>
@@ -566,7 +566,7 @@
           <Property Name="FechaModifica" Type="DateTime" Precision="0" />
           <Property Name="idEstatus" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Estatus" Relationship="Self.FK_Maestros_Estatus_idEstatus" FromRole="Maestros" ToRole="Estatus" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Maestros_idMaestro" FromRole="Maestros" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Usuarios_Maestros_idMaestro" FromRole="Maestros" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Permisos">
           <Key>
@@ -576,7 +576,7 @@
           <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idEstatus" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Estatus" Relationship="Self.FK_Permisos_Estatus_idEstatus" FromRole="Permisos" ToRole="Estatus" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Permisos_idPermiso" FromRole="Permisos" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Usuarios_Permisos_idPermiso" FromRole="Permisos" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Prestamos">
           <Key>
@@ -593,29 +593,7 @@
           <Property Name="idEstatus" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Estatus" Relationship="Self.FK_Prestamos_Estatus_idEstatus" FromRole="Prestamos" ToRole="Estatus" />
           <NavigationProperty Name="Libros" Relationship="Self.FK_Prestamos_Libros_idLibro" FromRole="Prestamos" ToRole="Libros" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Prestamos_Usuarios_idUsuario" FromRole="Prestamos" ToRole="Usuarios" />
-        </EntityType>
-        <EntityType Name="Usuarios">
-          <Key>
-            <PropertyRef Name="idUsuario" />
-          </Key>
-          <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idMaestro" Type="Int32" />
-          <Property Name="idAlumno" Type="Int32" />
-          <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Contraseña" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="idPermiso" Type="Int32" Nullable="false" />
-          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="FechaModifica" Type="DateTime" Precision="0" />
-          <Property Name="idEstatus" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Alumnos" Relationship="Self.FK_Usuarios_Alumnos_idAlumno" FromRole="Usuarios" ToRole="Alumnos" />
-          <NavigationProperty Name="Estatus" Relationship="Self.FK_Usuarios_Estatus_idEstatus" FromRole="Usuarios" ToRole="Estatus" />
-          <NavigationProperty Name="Incidencias" Relationship="Self.FK_Incidencias_Usuarios_idUsuario" FromRole="Usuarios" ToRole="Incidencias" />
-          <NavigationProperty Name="Maestros" Relationship="Self.FK_Usuarios_Maestros_idMaestro" FromRole="Usuarios" ToRole="Maestros" />
-          <NavigationProperty Name="Permisos" Relationship="Self.FK_Usuarios_Permisos_idPermiso" FromRole="Usuarios" ToRole="Permisos" />
-          <NavigationProperty Name="Prestamos" Relationship="Self.FK_Prestamos_Usuarios_idUsuario" FromRole="Usuarios" ToRole="Prestamos" />
+          <NavigationProperty Name="Usuarios" Relationship="BibliotecaModel.FK_Prestamos_Usuarios_idUsuario" FromRole="Prestamos" ToRole="Usuarios" />
         </EntityType>
         <Association Name="FK_Alumnos_Estatus_idEstatus">
           <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
@@ -626,18 +604,6 @@
             </Principal>
             <Dependent Role="Alumnos">
               <PropertyRef Name="idEstatus" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Usuarios_Alumnos_idAlumno">
-          <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="0..1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Alumnos">
-              <PropertyRef Name="idAlumno" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="idAlumno" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -749,18 +715,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuarios_Estatus_idEstatus">
-          <End Role="Estatus" Type="Self.Estatus" Multiplicity="1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Estatus">
-              <PropertyRef Name="idEstatus" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="idEstatus" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Incidencias_Libros_idLibro">
           <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
           <End Role="Incidencias" Type="Self.Incidencias" Multiplicity="*" />
@@ -770,18 +724,6 @@
             </Principal>
             <Dependent Role="Incidencias">
               <PropertyRef Name="idLibro" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Incidencias_Usuarios_idUsuario">
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
-          <End Role="Incidencias" Type="Self.Incidencias" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuarios">
-              <PropertyRef Name="idUsuario" />
-            </Principal>
-            <Dependent Role="Incidencias">
-              <PropertyRef Name="idUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -797,42 +739,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuarios_Maestros_idMaestro">
-          <End Role="Maestros" Type="Self.Maestros" Multiplicity="0..1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Maestros">
-              <PropertyRef Name="idMaestro" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="idMaestro" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Usuarios_Permisos_idPermiso">
-          <End Role="Permisos" Type="Self.Permisos" Multiplicity="1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Permisos">
-              <PropertyRef Name="idPermiso" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="idPermiso" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Prestamos_Usuarios_idUsuario">
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
-          <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuarios">
-              <PropertyRef Name="idUsuario" />
-            </Principal>
-            <Dependent Role="Prestamos">
-              <PropertyRef Name="idUsuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="BibliotecaContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />
           <EntitySet Name="Autores" EntityType="Self.Autores" />
@@ -843,14 +749,9 @@
           <EntitySet Name="Maestros" EntityType="Self.Maestros" />
           <EntitySet Name="Permisos" EntityType="Self.Permisos" />
           <EntitySet Name="Prestamos" EntityType="Self.Prestamos" />
-          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
           <AssociationSet Name="FK_Alumnos_Estatus_idEstatus" Association="Self.FK_Alumnos_Estatus_idEstatus">
             <End Role="Estatus" EntitySet="Estatus" />
             <End Role="Alumnos" EntitySet="Alumnos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Usuarios_Alumnos_idAlumno" Association="Self.FK_Usuarios_Alumnos_idAlumno">
-            <End Role="Alumnos" EntitySet="Alumnos" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
           <AssociationSet Name="FK_Autores_Estatus_idEstatus" Association="Self.FK_Autores_Estatus_idEstatus">
             <End Role="Estatus" EntitySet="Estatus" />
@@ -888,32 +789,12 @@
             <End Role="Estatus" EntitySet="Estatus" />
             <End Role="Prestamos" EntitySet="Prestamos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuarios_Estatus_idEstatus" Association="Self.FK_Usuarios_Estatus_idEstatus">
-            <End Role="Estatus" EntitySet="Estatus" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
           <AssociationSet Name="FK_Incidencias_Libros_idLibro" Association="Self.FK_Incidencias_Libros_idLibro">
             <End Role="Libros" EntitySet="Libros" />
             <End Role="Incidencias" EntitySet="Incidencias" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incidencias_Usuarios_idUsuario" Association="Self.FK_Incidencias_Usuarios_idUsuario">
-            <End Role="Usuarios" EntitySet="Usuarios" />
-            <End Role="Incidencias" EntitySet="Incidencias" />
-          </AssociationSet>
           <AssociationSet Name="FK_Prestamos_Libros_idLibro" Association="Self.FK_Prestamos_Libros_idLibro">
             <End Role="Libros" EntitySet="Libros" />
-            <End Role="Prestamos" EntitySet="Prestamos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Usuarios_Maestros_idMaestro" Association="Self.FK_Usuarios_Maestros_idMaestro">
-            <End Role="Maestros" EntitySet="Maestros" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Usuarios_Permisos_idPermiso" Association="Self.FK_Usuarios_Permisos_idPermiso">
-            <End Role="Permisos" EntitySet="Permisos" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Prestamos_Usuarios_idUsuario" Association="Self.FK_Prestamos_Usuarios_idUsuario">
-            <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Prestamos" EntitySet="Prestamos" />
           </AssociationSet>
           <FunctionImport Name="GetIncidencia" ReturnType="Collection(BibliotecaModel.GetIncidencia_Result)">
@@ -926,6 +807,31 @@
           <FunctionImport Name="GetPrestamo" ReturnType="Collection(BibliotecaModel.GetPrestamo_Result)">
           <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="Usuarios" EntityType="BibliotecaModel.Usuarios" />
+          <AssociationSet Name="FK_Usuarios_Alumnos_idAlumno" Association="BibliotecaModel.FK_Usuarios_Alumnos_idAlumno">
+            <End Role="Alumnos" EntitySet="Alumnos" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Estatus_idEstatus" Association="BibliotecaModel.FK_Usuarios_Estatus_idEstatus">
+            <End Role="Estatus" EntitySet="Estatus" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Incidencias_Usuarios_idUsuario" Association="BibliotecaModel.FK_Incidencias_Usuarios_idUsuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Incidencias" EntitySet="Incidencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Maestros_idMaestro" Association="BibliotecaModel.FK_Usuarios_Maestros_idMaestro">
+            <End Role="Maestros" EntitySet="Maestros" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Permisos_idPermiso" Association="BibliotecaModel.FK_Usuarios_Permisos_idPermiso">
+            <End Role="Permisos" EntitySet="Permisos" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prestamos_Usuarios_idUsuario" Association="BibliotecaModel.FK_Prestamos_Usuarios_idUsuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Prestamos" EntitySet="Prestamos" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="GetIncidencia_Result">
           <Property Type="Int32" Name="idIncidencia" Nullable="false" />
@@ -978,6 +884,100 @@
           <Property Type="String" Name="NickName" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="CorreoElectronico" Nullable="true" MaxLength="50" />
         </ComplexType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idMaestro" Type="Int32" />
+          <Property Name="idAlumno" Type="Int32" />
+          <Property Name="NickName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idPermiso" Type="Int32" Nullable="false" />
+          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FechaModifica" Type="DateTime" Precision="0" />
+          <Property Name="idEstatus" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Alumnos" Relationship="BibliotecaModel.FK_Usuarios_Alumnos_idAlumno" FromRole="Usuarios" ToRole="Alumnos" />
+          <NavigationProperty Name="Estatus" Relationship="BibliotecaModel.FK_Usuarios_Estatus_idEstatus" FromRole="Usuarios" ToRole="Estatus" />
+          <NavigationProperty Name="Incidencias" Relationship="BibliotecaModel.FK_Incidencias_Usuarios_idUsuario" FromRole="Usuarios" ToRole="Incidencias" />
+          <NavigationProperty Name="Maestros" Relationship="BibliotecaModel.FK_Usuarios_Maestros_idMaestro" FromRole="Usuarios" ToRole="Maestros" />
+          <NavigationProperty Name="Permisos" Relationship="BibliotecaModel.FK_Usuarios_Permisos_idPermiso" FromRole="Usuarios" ToRole="Permisos" />
+          <NavigationProperty Name="Prestamos" Relationship="BibliotecaModel.FK_Prestamos_Usuarios_idUsuario" FromRole="Usuarios" ToRole="Prestamos" />
+        </EntityType>
+        <Association Name="FK_Usuarios_Alumnos_idAlumno">
+          <End Type="BibliotecaModel.Alumnos" Role="Alumnos" Multiplicity="0..1" />
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumnos">
+              <PropertyRef Name="idAlumno" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idAlumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Estatus_idEstatus">
+          <End Type="BibliotecaModel.Estatus" Role="Estatus" Multiplicity="1" />
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estatus">
+              <PropertyRef Name="idEstatus" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idEstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Incidencias_Usuarios_idUsuario">
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+          <End Type="BibliotecaModel.Incidencias" Role="Incidencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="Incidencias">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Maestros_idMaestro">
+          <End Type="BibliotecaModel.Maestros" Role="Maestros" Multiplicity="0..1" />
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maestros">
+              <PropertyRef Name="idMaestro" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idMaestro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Permisos_idPermiso">
+          <End Type="BibliotecaModel.Permisos" Role="Permisos" Multiplicity="1" />
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permisos">
+              <PropertyRef Name="idPermiso" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idPermiso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prestamos_Usuarios_idUsuario">
+          <End Type="BibliotecaModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="BibliotecaModel.Prestamos" Role="Prestamos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="Prestamos">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1108,23 +1108,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="BibliotecaModel.Usuarios">
-              <MappingFragment StoreEntitySet="Usuarios">
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="idMaestro" ColumnName="idMaestro" />
-                <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
-                <ScalarProperty Name="NickName" ColumnName="NickName" />
-                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
-                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
-                <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
-                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
-                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
-                <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
-                <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GetIncidencia" FunctionName="BibliotecaModel.Store.GetIncidencia">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.GetIncidencia_Result">
@@ -1192,6 +1175,23 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="BibliotecaModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+                <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+                <ScalarProperty Name="idMaestro" ColumnName="idMaestro" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
