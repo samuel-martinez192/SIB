@@ -32,11 +32,11 @@ namespace SIB.EntityFramework
         public virtual DbSet<Editorial> Editorial { get; set; }
         public virtual DbSet<Estatus> Estatus { get; set; }
         public virtual DbSet<Incidencias> Incidencias { get; set; }
-        public virtual DbSet<Libros> Libros { get; set; }
         public virtual DbSet<Maestros> Maestros { get; set; }
         public virtual DbSet<Permisos> Permisos { get; set; }
         public virtual DbSet<Prestamos> Prestamos { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Libros> Libros { get; set; }
     
         public virtual ObjectResult<GetIncidencia_Result> GetIncidencia(Nullable<int> id)
         {

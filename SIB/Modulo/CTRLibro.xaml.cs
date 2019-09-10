@@ -8,6 +8,7 @@ using MahApps.Metro.Behaviours;
 using SIB.Herramientas;
 using SIB.EntityFramework;
 using System.Data.Entity;
+using System.IO;
 
 namespace SIB.Modulo
 {
@@ -17,6 +18,7 @@ namespace SIB.Modulo
     public partial class CTRLibro : MetroWindow
     {
         Libros instancia = new Libros();
+        Llave llave = null;
         private byte[] bytesImagen { get; set; }
         /// <summary>
         /// Constructor sin parametros
@@ -90,6 +92,15 @@ namespace SIB.Modulo
                 {
                     grdLibros.DataContext = instancia;
                     cargarImagen(instancia.Imagen);
+
+                    if (instancia.Cifrado == null || instancia.Cifrado == false)
+                    {
+                        btnCifrado.Content = "Cifrar";
+                    }
+                    else
+                    {
+                        btnCifrado.Content = "Descifrar";
+                    }
                 }
             }
             catch (Exception ex)
@@ -141,7 +152,7 @@ namespace SIB.Modulo
             {
                 if (e.ClickCount == 2)
                 {
-                    var datos = Herramientas.Herramientas.abrirDialogo("*.jpg|*.jpg|*.png|*.png|*.bmp|*.bmp", false, "Seleccione una imagen para el libro");
+                    var datos = Herramientas.Herramientas.obtenerDatosDialogo("*.jpg|*.jpg|*.png|*.png|*.bmp|*.bmp", false, "Seleccione una imagen para el libro");
                     if (datos.Count > 0)
                     {
                         cargarImagen(datos[0]);
@@ -187,6 +198,45 @@ namespace SIB.Modulo
             catch (Exception ex)
             {
                 ex.GuardarError();
+            }
+        }
+
+        private void BtnLllave_Click(object sender, RoutedEventArgs e)
+        {
+            var ruta = Herramientas.Herramientas.obtenerRutaDialogo("*.json|", false, "Seleccione un archivo JSON");
+            if (ruta.Count > 0)
+            {
+                string directorio = Path.GetDirectoryName(ruta[0]);
+                string archivo = Path.GetFileName(ruta[0]);
+                llave = LlaveJson.ObtenerLlave(directorio, archivo);
+            }
+        }
+
+        private async void BtnCifrado_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (llave != null)
+            {
+                if (instancia.Cifrado == null || instancia.Cifrado == false)
+                {
+                    string textoOriginal = instancia.Ubicacion;
+                    instancia.Ubicacion = textoOriginal.EncriptarTexto(llave.Valor);
+                    txtUbicacion.Text = instancia.Ubicacion;
+                    instancia.Cifrado = true;
+                    btnCifrado.Content = "Descifrar";
+                }
+                else
+                {
+                    string textoCifrado = instancia.Ubicacion;
+                    instancia.Ubicacion = textoCifrado.DesencriptarTexto(llave.Valor);
+                    txtUbicacion.Text = instancia.Ubicacion;
+                    instancia.Cifrado = false;
+                    btnCifrado.Content = "Cifrar";
+                }
+            }
+            else
+            {
+                await this.ShowMessageAsync("Notificacion", "Se requiere buscar o generar una llave de cifrado");
             }
         }
     }

@@ -112,7 +112,42 @@ namespace SIB.Herramientas
             }
         }
 
-        public static List<byte[]> abrirDialogo(string strFiltro = "Text Files (.txt)|*.txt|All Files (*.*)|*.*", bool multiSeleccion = false, string titulo = "Seleccionar archivo/s")
+        public static List<string> obtenerRutaDialogo(string strFiltro = "Text Files (.txt)|*.txt|All Files (*.*)|*.*", bool multiSeleccion = false, string titulo = "Seleccionar archivo/s")
+        {
+            List<string> ret = new List<string>();
+
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.Filter = strFiltro;
+                dialog.Multiselect = multiSeleccion;
+                dialog.Title = titulo;
+
+
+                if (!multiSeleccion)
+                {
+                    if (dialog.ShowDialog() == DialogResult.OK && dialog.FileName != null && dialog.FileName.Length > 0)
+                    {
+                        string ruta = dialog.FileName;
+                        ret.Add(ruta);
+                    }
+                }
+                else
+                {
+                    if (dialog.ShowDialog() == DialogResult.OK && dialog.FileNames != null && dialog.FileNames.Length > 0)
+                    {
+                        string[] rutas = dialog.FileNames;
+                        foreach (var item in rutas)
+                        {
+                            ret.Add(item);
+                        }
+                    }
+                }
+            }
+
+            return ret;
+        }
+
+        public static List<byte[]> obtenerDatosDialogo(string strFiltro = "Text Files (.txt)|*.txt|All Files (*.*)|*.*", bool multiSeleccion = false, string titulo = "Seleccionar archivo/s")
         {
             List<byte[]> ret = new List<byte[]>();
 
@@ -178,6 +213,71 @@ namespace SIB.Herramientas
             }
 
             return resultado;
+        }
+
+        /// <summary>
+        /// Encripta el texto usando el algoritmo AES y lo retona en Base 64
+        /// </summary>
+        public static string EncriptarTexto(this string textoPlano, string llave)
+        {
+            // Revisando parametros.
+            if (textoPlano == null || textoPlano.Length <= 0)
+                throw new ArgumentNullException("textoPlano");
+            if (llave == null || llave.Length <= 0)
+                throw new ArgumentNullException("llave");
+
+            byte[] iv = new byte[16];
+            byte[] array;
+
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(llave);
+                aes.IV = iv;
+                ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
+                        {
+                            streamWriter.Write(textoPlano);
+                        }
+                        array = memoryStream.ToArray();
+                    }
+                }
+            }
+            return Convert.ToBase64String(array);
+        }
+
+        /// <summary>
+        /// Desencripta el texto cifrado usando AES en formato Base 64
+        /// </summary>
+        public static string DesencriptarTexto(this string textoCifrado, string llave)
+        {
+            // Revisando parametros.
+            if (textoCifrado == null || textoCifrado.Length <= 0)
+                throw new ArgumentNullException("textoCifrado");
+            if (llave == null || llave.Length <= 0)
+                throw new ArgumentNullException("llave");
+
+            byte[] iv = new byte[16];
+            byte[] buffer = Convert.FromBase64String(textoCifrado);
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(llave);
+                aes.IV = iv;
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                using (MemoryStream memoryStream = new MemoryStream(buffer))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader((Stream)cryptoStream))
+                        {
+                            return streamReader.ReadToEnd();
+                        }
+                    }
+                }
+            }
         }
     }
 }

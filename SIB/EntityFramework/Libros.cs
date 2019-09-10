@@ -33,6 +33,7 @@ namespace SIB.EntityFramework
         public System.DateTime FechaIngreso { get; set; }
         public Nullable<System.DateTime> FechaModifica { get; set; }
         public bool idEstatus { get; set; }
+        public Nullable<bool> Cifrado { get; set; }
     
         public virtual Autores Autores { get; set; }
         public virtual Editorial Editorial { get; set; }

@@ -10,22 +10,16 @@
         <EntityTypeShape EntityType="BibliotecaModel.Editorial" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Estatus" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Incidencias" Width="1.5" PointX="10.5" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaModel.Libros" Width="1.5" PointX="8.25" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Maestros" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Permisos" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Prestamos" Width="1.5" PointX="13.5" PointY="11" IsExpanded="true" />
         <AssociationConnector Association="BibliotecaModel.FK_Alumnos_Estatus_idEstatus" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Autores_Estatus_idEstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaModel.FK_Libros_Autores_idAutor" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Editorial_Estatus_idEstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaModel.FK_Libros_Editorial_idEditorial" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Incidencias_Estatus_idEstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaModel.FK_Libros_Estatus_idEstatus" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Maestros_Estatus_idEstatus" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Permisos_Estatus_idEstatus" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Estatus_idEstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaModel.FK_Incidencias_Libros_idLibro" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Libros_idLibro" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BibliotecaModel.Usuarios" Width="1.5" PointX="5.25" PointY="11.25" />
         <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Alumnos_idAlumno" />
         <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Estatus_idEstatus" />
@@ -33,6 +27,12 @@
         <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Maestros_idMaestro" />
         <AssociationConnector Association="BibliotecaModel.FK_Usuarios_Permisos_idPermiso" />
         <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Usuarios_idUsuario" />
+        <EntityTypeShape EntityType="BibliotecaModel.Libros" Width="1.5" PointX="8.25" PointY="9.75" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Autores_idAutor" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Editorial_idEditorial" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libros_Estatus_idEstatus" />
+        <AssociationConnector Association="BibliotecaModel.FK_Incidencias_Libros_idLibro" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamos_Libros_idLibro" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

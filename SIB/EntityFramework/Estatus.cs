@@ -21,11 +21,11 @@ namespace SIB.EntityFramework
             this.Autores = new HashSet<Autores>();
             this.Editorial = new HashSet<Editorial>();
             this.Incidencias = new HashSet<Incidencias>();
-            this.Libros = new HashSet<Libros>();
             this.Maestros = new HashSet<Maestros>();
             this.Permisos = new HashSet<Permisos>();
             this.Prestamos = new HashSet<Prestamos>();
             this.Usuarios = new HashSet<Usuarios>();
+            this.Libros = new HashSet<Libros>();
         }
     
         public bool idEstatus { get; set; }
@@ -40,8 +40,6 @@ namespace SIB.EntityFramework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Incidencias> Incidencias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Libros> Libros { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Maestros> Maestros { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Permisos> Permisos { get; set; }
@@ -49,5 +47,7 @@ namespace SIB.EntityFramework
         public virtual ICollection<Prestamos> Prestamos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuarios> Usuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Libros> Libros { get; set; }
     }
 }

@@ -163,7 +163,7 @@ namespace SIB.Modulo
             {
                 if (e.ClickCount == 2)
                 {
-                    var datos = Herramientas.Herramientas.abrirDialogo("*.jpg|*.jpg|*.png|*.png|*.bmp|*.bmp", false, "Seleccione una imagen para el usuario");
+                    var datos = Herramientas.Herramientas.obtenerDatosDialogo("*.jpg|*.jpg|*.png|*.png|*.bmp|*.bmp", false, "Seleccione una imagen para el usuario");
                     if (datos.Count > 0)
                     {
                         cargarImagen(datos[0]);

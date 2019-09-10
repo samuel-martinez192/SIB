@@ -25,7 +25,7 @@ namespace SIB.EntityFramework
         public bool idEstatus { get; set; }
     
         public virtual Estatus Estatus { get; set; }
-        public virtual Libros Libros { get; set; }
         public virtual Usuarios Usuarios { get; set; }
+        public virtual Libros Libros { get; set; }
     }
 }
