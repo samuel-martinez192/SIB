@@ -193,6 +193,7 @@ namespace SIB.Modulo
         {
             try
             {
+                Console.WriteLine("Saliendo del modulo");
                 this.Close();
             }
             catch (Exception ex)
